@@ -14,7 +14,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var latitude = ""
     var longitude = ""
-    
+    let openIdTok = "f19e9c513e6cf108d8fc045e1d8ba565"
     var weatherData: WeatherResponse?
     
     @IBOutlet weak var locationLabel: UILabel!
@@ -39,7 +39,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func getData(){
         
         print("get data")
-        let URL = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(self.latitude)&lon=\(self.longitude)&units=metric&appid=f19e9c513e6cf108d8fc045e1d8ba565")
+        let URL = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(self.latitude)&lon=\(self.longitude)&units=metric&appid=\(openIdTok)")
         let request = URLRequest(url: URL!)
         let _ = URLSession.shared.dataTask(with: request) { data, response, error in
             if (error != nil){
