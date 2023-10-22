@@ -1,4 +1,4 @@
-# task4_app
+# WeatherApp
 A Simple Weather App
 
 ## Introduction:
